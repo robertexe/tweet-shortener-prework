@@ -19,8 +19,9 @@ def word_substituter(str)
   str_array = str.split(' ')
   output_array = [];
   for word in str_array do
-   if dictionary.key?(word)
-      word = dictionary[word]
+    mod_word = word.downcase
+   if dictionary.key?(mod_word)
+      word = dictionary[mod_word]
    end
    output_array << word
   end
