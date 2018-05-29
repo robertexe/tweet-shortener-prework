@@ -15,10 +15,10 @@ def dictionary
 end
 
 
-def word_substituter(str)
-  str_array = str.split(' ')
+def word_substituter(tweet)
+  tweet_array = tweet.split(' ')
   output_array = [];
-  for word in str_array do
+  for word in tweet_array do
     mod_word = word.downcase
    if dictionary.key?(mod_word)
       word = dictionary[mod_word]
